@@ -12,10 +12,18 @@ module.exports = {
    * `ConsultantController.index()`
    */
   adminIndex: function (req, res) {
-    return res.json({
-      todo: 'index() is not implemented yet!'
-    });
-  },
+
+    return res.view({
+      myOne: 'World?',
+      myvar: 'hello???',
+      title: 'Yeap'
+    })
+
+
+    /*    return res.json({
+     todo: 'index() is not implemented yet!'
+     });*/
+  }
 
 };
 
