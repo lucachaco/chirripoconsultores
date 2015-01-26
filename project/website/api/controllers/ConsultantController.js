@@ -8,8 +8,14 @@
 module.exports = {
 
 
-
-
+  /**
+   * `ConsultantController.index()`
+   */
+  adminIndex: function (req, res) {
+    return res.json({
+      todo: 'index() is not implemented yet!'
+    });
+  },
 
 };
 
