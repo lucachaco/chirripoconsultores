@@ -34,7 +34,9 @@ module.exports.routes = {
 
   '/': {
     view: 'homepage'
-  }
+  },
+  'get /admin/consultants': {
+    view: 'consultants/index' }
 
   /***************************************************************************
   *                                                                          *
