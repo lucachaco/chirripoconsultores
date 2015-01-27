@@ -56,8 +56,10 @@ module.exports = {
 
     Consultant.create(req.body).exec(function (err, result) {
       if (err) {
+        req.session.flash['warning'].push('Please check required fields');
         return res.redirect('/admin/consultants/new')
       } else {
+        req.session.flash['success'].push('Created successfully');
         return res.redirect('/admin/consultants')
       }
     });
@@ -85,8 +87,10 @@ module.exports = {
       description: req.param('description')
     }).exec(function (err, result) {
       if (err) {
+        req.session.flash['warning'].push('Please check required fields');
         return res.redirect('/admin/consultants/' + req.param('id') + '/edit')
       } else {
+        req.session.flash['success'].push('Updated successfully');
         return res.redirect('/admin/consultants')
       }
     });

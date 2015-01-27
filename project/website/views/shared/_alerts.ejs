@@ -1,12 +1,11 @@
-<% if (req.session.flash['success']) { %>
+<% if (req.session.flash['success'].length > 0) { %>
 <div class="alert alert-success">
-  <%= req.session.flash['success'] %>
+  <%= req.session.flash['success'].pop() %>
 </div>
 <% } %>
-
-<% if (req.session.flash['warning']) { %>
+<% if (req.session.flash['warning'].length > 0) { %>
 <div class="alert alert-warning">
-  <%= req.session.flash['warning'] %>
+  <%= req.session.flash['warning'].pop() %>
 </div>
 <% } %>
 

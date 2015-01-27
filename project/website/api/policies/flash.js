@@ -1,7 +1,11 @@
-module.exports = function flash (req, res, next) {
+module.exports = function flash(req, res, next) {
 
-  req.session.flash = {};
-  req.session.flash['success'] = 'Created successfully';
+  if (!req.session.flash) {
+    req.session.flash = {};
+    req.session.flash['success'] = [];
+    req.session.flash['warning'] = [];
+  }
+
 
   next();
 };
