@@ -33,20 +33,6 @@ module.exports = {
   },
 
   /**
-   * `ConsultantController.create()`
-   */
-  create: function (req, res) {
-    Consultant.create(req.body).exec(function (err, result) {
-      if (err) {
-        return res.redirect('/admin/consultants/new')
-      } else {
-        return res.redirect('/admin/consultants')
-      }
-    });
-  },
-
-
-  /**
    * `ConsultantController.new()`
    */
   new: function (req, res) {
@@ -62,6 +48,19 @@ module.exports = {
   },
 
   /**
+   * `ConsultantController.create()`
+   */
+  create: function (req, res) {
+    Consultant.create(req.body).exec(function (err, result) {
+      if (err) {
+        return res.redirect('/admin/consultants/new')
+      } else {
+        return res.redirect('/admin/consultants')
+      }
+    });
+  },
+
+  /**
    * `ConsultantController.edit()`
    */
   edit: function (req, res) {
@@ -71,12 +70,28 @@ module.exports = {
         consultant: consultant
       })
     });
-
-
   },
 
   /**
-   * `ConsultantController.edit()`
+   * `ConsultantController.update()`
+   */
+  update: function (req, res) {
+    Consultant.update({id: req.param('id')}, {
+      number: req.param('number'),
+      name: req.param('name'),
+      description: req.param('description')
+    }).exec(function (err, result) {
+      if (err) {
+        return res.redirect('/admin/consultants/' + req.param('id') + '/edit')
+      } else {
+        return res.redirect('/admin/consultants')
+      }
+    });
+  },
+
+
+  /**
+   * `ConsultantController.destroy()`
    */
   destroy: function (req, res) {
     Consultant.destroy({id: req.param('id')})
