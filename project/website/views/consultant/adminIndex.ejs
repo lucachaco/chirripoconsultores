@@ -1,7 +1,7 @@
 <!-- Page title -->
 <div class="page-title">
-  <h2><i class="fa fa-list color"></i> Form
-    <small>Subtext for header</small>
+  <h2><i class="fa fa-group color"></i> Consultants
+    <small>Team of Chirripó Consultores</small>
   </h2>
   <hr/>
 </div>
@@ -9,121 +9,128 @@
 
 <div class="row">
   <div class="col-md-12">
+
     <div class="awidget full-width">
       <div class="awidget-head">
-        <h3>Form</h3>
+        <div class="col-lg-6">
+          <h3>All consultants</h3>
+        </div>
+        <div class="col-lg-6 button-context">
+          <button type="button" class="btn btn-primary">New</button>
+        </div>
       </div>
       <div class="awidget-body">
-        <form class="form-horizontal" role="form">
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Input Box</label>
+        <table class="table table-hover table-bordered ">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Date</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Control</th>
+          </tr>
+          </thead>
+          <tbody>
 
-            <div class="col-lg-10">
-              <input type="text" class="form-control" placeholder="Input Box">
-            </div>
-          </div>
+          <tr>
+            <td>1</td>
+            <td>Ravi Kumar</td>
+            <td>India</td>
+            <td>23/12/2012</td>
+            <td>Paid</td>
+            <td><span class="label label-success">Active</span></td>
+            <td>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Password</label>
+              <button class="btn btn-xs btn-success"><i class="fa fa-check"></i></button>
+              <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i></button>
 
-            <div class="col-lg-10">
-              <input type="password" class="form-control" placeholder="Password Box">
-            </div>
-          </div>
+            </td>
+          </tr>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Textarea</label>
 
-            <div class="col-lg-10">
-              <textarea class="form-control" rows="3" placeholder="Textarea"></textarea>
-            </div>
-          </div>
+          <tr>
+            <td>2</td>
+            <td>Parneethi Chopra</td>
+            <td>USA</td>
+            <td>13/02/2012</td>
+            <td>Free</td>
+            <td><span class="label label-danger">Banned</span></td>
+            <td>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Checkbox</label>
+              <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+              <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+              <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
 
-            <div class="col-lg-10">
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
-              </label>
-              <label class="checkbox-inline">
-                <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
-              </label>
-            </div>
-          </div>
+            </td>
+          </tr>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Radio Box</label>
+          <tr>
+            <td>3</td>
+            <td>Kumar Ragu</td>
+            <td>Japan</td>
+            <td>12/03/2012</td>
+            <td>Paid</td>
+            <td><span class="label label-success">Active</span></td>
+            <td>
 
-            <div class="col-lg-10">
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                  Option one is this and that&mdash;be sure to include why it's great
-                </label>
+              <div class="btn-group">
+                <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
+                <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
+                <button class="btn btn-default btn-xs"><i class="fa fa-times"></i></button>
               </div>
-              <div class="radio">
-                <label>
-                  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                  Option two can be something else and selecting it will deselect option one
-                </label>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>Vishnu Vardan</td>
+            <td>Bangkok</td>
+            <td>03/11/2012</td>
+            <td>Paid</td>
+            <td><span class="label label-success">Active</span></td>
+            <td>
+
+              <div class="btn-group">
+                <button class="btn btn-xs btn-success"><i class="fa fa-check"></i></button>
+                <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></button>
+                <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i></button>
               </div>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Select Box</label>
+            </td>
+          </tr>
 
-            <div class="col-lg-10">
-              <select class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
+          <tr>
+            <td>5</td>
+            <td>Anuksha Sharma</td>
+            <td>Singapore</td>
+            <td>13/32/2012</td>
+            <td>Free</td>
+            <td><span class="label label-danger">Banned</span></td>
+            <td>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">Select Box</label>
+              <div class="btn-group1">
+                <button class="btn btn-xs btn-success"><i class="fa fa-check"></i></button>
+                <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></button>
+                <button class="btn btn-xs btn-danger"><i class="fa fa-times"></i></button>
+              </div>
 
-            <div class="col-lg-10">
-              <select multiple class="form-control">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-              </select>
-            </div>
-          </div>
+            </td>
+          </tr>
 
-          <div class="form-group">
-            <label class="col-lg-2 control-label">CLEditor</label>
+          </tbody>
+        </table>
 
-            <div class="col-lg-10">
-              <textarea class="cleditor" name="input"></textarea>
-            </div>
-          </div>
 
-          <div class="form-group">
-            <div class="col-lg-offset-2 col-lg-10">
-              <hr/>
-              <button type="button" class="btn btn-default">Default</button>
-              <button type="button" class="btn btn-primary">Primary</button>
-              <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-info">Info</button>
-              <button type="button" class="btn btn-warning">Warning</button>
-              <button type="button" class="btn btn-danger">Danger</button>
-            </div>
-          </div>
-        </form>
+        <div class="clearfix"></div>
+
       </div>
     </div>
+
+
   </div>
 </div>
