@@ -8,6 +8,17 @@
   <%= req.session.flash['warning'].pop() %>
 </div>
 <% } %>
+<% if (req.session.flash['info'].length > 0) { %>
+<div class="alert alert-info">
+  <%= req.session.flash['info'].pop() %>
+</div>
+<% } %>
+
+<% if (req.session.flash['danger'].length > 0) { %>
+<div class="alert alert-danger">
+  <%= req.session.flash['danger'].pop() %>
+</div>
+<% } %>
 
 
 

@@ -103,6 +103,7 @@ module.exports = {
   destroy: function (req, res) {
     Consultant.destroy({id: req.param('id')})
       .exec(function (err) {
+        req.session.flash['info'].push('Deleted successfully');
         return res.redirect('/admin/consultants')
       });
   }
