@@ -37,9 +37,14 @@ module.exports = {
    * `ConsultantController.adminNew()`
    */
   new: function (req, res) {
+    var defaultConsultant = {
+      name: 'default name',
+      description: 'default description'
 
-    return res.view('consultant/new')
-
+    }
+    return res.view('consultant/new', {
+      consultant: defaultConsultant
+    })
   },
 
   /**
