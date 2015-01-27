@@ -32,14 +32,27 @@ module.exports = {
      });*/
   },
 
+  /**
+   * `ConsultantController.create()`
+   */
+  create: function (req, res) {
+    Consultant.create(req.body).exec(function (err, result) {
+      if (err) {
+        return res.redirect('/admin/consultants/new')
+      } else {
+        return res.redirect('/admin/consultants')
+      }
+    });
+  },
+
 
   /**
    * `ConsultantController.adminNew()`
    */
   new: function (req, res) {
     var defaultConsultant = {
-      name: 'default name',
-      description: 'default description'
+      name: '',
+      description: ''
 
     }
     return res.view('consultant/new', {
