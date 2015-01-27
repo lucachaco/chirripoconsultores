@@ -41,7 +41,11 @@ module.exports.routes = {
 
   'get /admin/projects': 'ProjectController.table',
   'get /admin/projects/new': 'ProjectController.new',
-  'get /admin/projects/:id/edit': 'ProjectController.edit'
+  'get /admin/projects/:id/edit': 'ProjectController.edit',
+
+  'get /admin/open-positions': 'OpenPositionController.table',
+  'get /admin/open-positions/new': 'OpenPositionController.new',
+  'get /admin/open-positions/:id/edit': 'OpenPositionController.edit'
 
   /***************************************************************************
    *                                                                          *
