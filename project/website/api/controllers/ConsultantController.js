@@ -72,7 +72,18 @@ module.exports = {
     });
 
 
+  },
+
+  /**
+   * `ConsultantController.edit()`
+   */
+  destroy: function (req, res) {
+    Consultant.destroy({id: req.param('id')})
+      .exec(function (err) {
+        return res.redirect('/admin/consultants')
+      });
   }
+
 
 };
 
