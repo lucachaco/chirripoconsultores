@@ -13,11 +13,18 @@ module.exports = {
    */
   table: function (req, res) {
 
-    return res.view('consultant/table', {
-      myOne: 'World?',
-      myvar: 'hello???',
-      title: 'Yeap'
-    })
+
+    Consultant.find().exec(function (err, consultants) {
+      if (err) {
+        res.send(400);
+      } else {
+        return res.view('consultant/table', {
+          consultants: consultants,
+          myvar: 'hello???',
+          title: 'Yeap'
+        })
+      }
+    });
 
 
     /*    return res.json({
