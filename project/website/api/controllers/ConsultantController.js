@@ -13,7 +13,6 @@ module.exports = {
    */
   table: function (req, res) {
 
-
     Consultant.find().sort('number asc').exec(function (err, consultants) {
       if (err) {
         res.send(400);
@@ -36,6 +35,8 @@ module.exports = {
    * `ConsultantController.new()`
    */
   new: function (req, res) {
+
+
     var defaultConsultant = {
       number: 0,
       name: '',
@@ -51,6 +52,8 @@ module.exports = {
    * `ConsultantController.create()`
    */
   create: function (req, res) {
+
+
     Consultant.create(req.body).exec(function (err, result) {
       if (err) {
         return res.redirect('/admin/consultants/new')

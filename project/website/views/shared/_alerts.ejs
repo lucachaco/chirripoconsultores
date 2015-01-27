@@ -1,0 +1,14 @@
+<% if (req.session.flash['success']) { %>
+<div class="alert alert-success">
+  <%= req.session.flash['success'] %>
+</div>
+<% } %>
+
+<% if (req.session.flash['warning']) { %>
+<div class="alert alert-warning">
+  <%= req.session.flash['warning'] %>
+</div>
+<% } %>
+
+
+
