@@ -1,1 +1,52 @@
-edit
+<!-- Page title -->
+<div class="page-title">
+  <h2><i class="fa fa-group color"></i> Edit consultant
+    <small>Edit a consultant of the organization.</small>
+  </h2>
+  <hr/>
+</div>
+<!-- Page title -->
+
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="awidget full-width">
+      <div class="awidget-head">
+        <h3></h3>
+      </div>
+      <div class="awidget-body">
+
+        <form action="/consultants" method="post" class="form-horizontal" role="form">
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Name</label>
+
+            <div class="col-lg-10">
+              <input type="text" name="name" class="form-control" placeholder="Consultant name" autocomplete="off">
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <label class="col-lg-2 control-label">Description</label>
+
+            <div class="col-lg-10">
+              <textarea class="form-control" name="description" rows="6" placeholder="Description"></textarea>
+            </div>
+          </div>
+
+
+          <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+              <hr/>
+              <button type="button" class="btn btn-default">Cancel</button>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </div>
+</div>
