@@ -37,7 +37,11 @@ module.exports.routes = {
   },
   'get /admin/consultants': 'ConsultantController.table',
   'get /admin/consultants/new': 'ConsultantController.new',
-  'get /admin/consultants/:id/edit': 'ConsultantController.edit'
+  'get /admin/consultants/:id/edit': 'ConsultantController.edit',
+
+  'get /admin/projects': 'ProjectController.table',
+  'get /admin/projects/new': 'ProjectController.new',
+  'get /admin/projects/:id/edit': 'ProjectController.edit'
 
   /***************************************************************************
    *                                                                          *
