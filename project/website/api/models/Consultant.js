@@ -8,7 +8,10 @@
 module.exports = {
   schema: false,
   attributes: {
-
+    number: {
+      type: 'integer',
+      required: true
+    },
     name: {
       type: 'string',
       required: true

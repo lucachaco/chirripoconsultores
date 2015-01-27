@@ -14,7 +14,7 @@ module.exports = {
   table: function (req, res) {
 
 
-    Consultant.find().exec(function (err, consultants) {
+    Consultant.find().sort('number asc').exec(function (err, consultants) {
       if (err) {
         res.send(400);
       } else {
@@ -51,6 +51,7 @@ module.exports = {
    */
   new: function (req, res) {
     var defaultConsultant = {
+      number: 0,
       name: '',
       description: ''
 
