@@ -11,9 +11,9 @@ module.exports = {
   /**
    * `ConsultantController.adminIndex()`
    */
-  adminIndex: function (req, res) {
+  table: function (req, res) {
 
-    return res.view({
+    return res.view('consultant/table', {
       myOne: 'World?',
       myvar: 'hello???',
       title: 'Yeap'
@@ -29,18 +29,18 @@ module.exports = {
   /**
    * `ConsultantController.adminNew()`
    */
-  adminNew: function (req, res) {
+  new: function (req, res) {
 
-    return res.view()
+    return res.view('consultant/new')
 
   },
 
   /**
    * `ConsultantController.adminEdit()`
    */
-  adminEdit: function (req, res) {
+  edit: function (req, res) {
 
-    return res.view()
+    return res.view('consultant/edit')
 
   }
 
