@@ -47,7 +47,7 @@ module.exports = {
    */
   edit: function (req, res) {
 
-    Consultant.findOne({id: '54c716e03b2474c056c41915'}, function (err, consultant) {
+    Consultant.findOne({id: req.param('id')}, function (err, consultant) {
       return res.view('consultant/edit', {
         consultant: consultant
       })
