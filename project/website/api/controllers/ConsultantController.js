@@ -9,7 +9,7 @@ module.exports = {
 
 
   /**
-   * `ConsultantController.index()`
+   * `ConsultantController.adminIndex()`
    */
   adminIndex: function (req, res) {
 
@@ -23,6 +23,25 @@ module.exports = {
     /*    return res.json({
      todo: 'index() is not implemented yet!'
      });*/
+  },
+
+
+  /**
+   * `ConsultantController.adminNew()`
+   */
+  adminNew: function (req, res) {
+
+    return res.view()
+
+  },
+
+  /**
+   * `ConsultantController.adminEdit()`
+   */
+  adminEdit: function (req, res) {
+
+    return res.view()
+
   }
 
 };
