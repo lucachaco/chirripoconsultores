@@ -814,6 +814,10 @@ strong {
   border-top: 0px;
 }
 
+th.table-control {
+  width: 65px;
+}
+
 /* Portfolio */
 
 .img-portfolio ul {
