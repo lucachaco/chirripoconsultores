@@ -9,7 +9,7 @@ module.exports = {
 
 
   /**
-   * `ConsultantController.adminIndex()`
+   * `ConsultantController.table()`
    */
   table: function (req, res) {
 
@@ -47,7 +47,7 @@ module.exports = {
 
 
   /**
-   * `ConsultantController.adminNew()`
+   * `ConsultantController.new()`
    */
   new: function (req, res) {
     var defaultConsultant = {
@@ -61,7 +61,7 @@ module.exports = {
   },
 
   /**
-   * `ConsultantController.adminEdit()`
+   * `ConsultantController.edit()`
    */
   edit: function (req, res) {
 
