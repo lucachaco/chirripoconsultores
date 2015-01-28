@@ -20,8 +20,21 @@ module.exports = {
    * `ConsultantController.loginCheck()`
    */
   loginCheck: function (req, res) {
-    req.session.authenticated = true;
-    return res.redirect('/admin/')
+
+    User.findOne({email: req.param('email'), password: req.param('password')}, function (err, user) {
+      console.log('User: ' + user);
+
+      if (user) {
+        req.session.authenticated = true;
+        return res.redirect('/admin/')
+      } else {
+        req.session.flash['danger'].push('Sorry, your email or password is incorrect. ');
+        return res.redirect('/admin/login')
+      }
+
+    });
+
+
   },
 
   /**
