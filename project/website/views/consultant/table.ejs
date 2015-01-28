@@ -1,0 +1,76 @@
+<!-- Page title -->
+<div class="page-title">
+  <h2><i class="fa fa-group color"></i> Consultants
+    <small></small>
+  </h2>
+  <hr/>
+</div>
+<!-- Page title -->
+<%- partial('../shared/_alerts.ejs') %>
+
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="awidget full-width">
+
+
+      <div class="awidget-head">
+        <div class="row">
+          <div class="col-lg-6">
+            <h3>All consultants</h3>
+          </div>
+          <div class="col-lg-6 button-context">
+            <a href="/admin/consultants/new">
+              <button type="button" class="btn btn-primary">New</button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="awidget-body">
+
+        <table class="table table-hover table-bordered ">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th class="table-control">Control</th>
+          </tr>
+          </thead>
+          <tbody>
+
+          <% for(var i = 0; i < consultants.length; i++) { %>
+          <tr>
+            <td><%= consultants[i].number %></td>
+            <td><%= consultants[i].name %></td>
+            <td><%= consultants[i].description %></td>
+            <td>
+
+              <a href="/admin/consultants/<%= consultants[i].id %>/edit">
+                <button class="btn btn-xs btn-warning"><i class="fa fa-pencil"></i></button>
+              </a>
+
+              <form action="/consultants/<%= consultants[i].id %>" method="post" style="float: right;">
+                <!--Specification doesnt allow put or delete method in HTML forms-->
+                <input type="hidden" name="_method" value="delete">
+                <button type="submit" class="btn btn-xs btn-danger" onclick="return confirm('Are you sure?')"><i
+                    class="fa fa-times"></i></button>
+              </form>
+            </td>
+          </tr>
+          <% } %>
+
+          </tbody>
+        </table>
+
+
+        <div class="clearfix"></div>
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

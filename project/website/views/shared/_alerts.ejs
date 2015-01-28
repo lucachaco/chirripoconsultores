@@ -1,0 +1,24 @@
+<% if (req.session.flash['success'].length > 0) { %>
+<div class="alert alert-success">
+  <%= req.session.flash['success'].pop() %>
+</div>
+<% } %>
+<% if (req.session.flash['warning'].length > 0) { %>
+<div class="alert alert-warning">
+  <%= req.session.flash['warning'].pop() %>
+</div>
+<% } %>
+<% if (req.session.flash['info'].length > 0) { %>
+<div class="alert alert-info">
+  <%= req.session.flash['info'].pop() %>
+</div>
+<% } %>
+
+<% if (req.session.flash['danger'].length > 0) { %>
+<div class="alert alert-danger">
+  <%= req.session.flash['danger'].pop() %>
+</div>
+<% } %>
+
+
+
