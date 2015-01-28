@@ -70,7 +70,7 @@ module.exports = function forbidden (data, options) {
       return res.jsonx(data);
     }
 
-    return res.send(html);
+    return res.redirect('/admin/login')
   });
 
 };

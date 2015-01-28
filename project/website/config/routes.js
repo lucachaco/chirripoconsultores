@@ -35,6 +35,11 @@ module.exports.routes = {
   '/': {
     view: 'homepage'
   },
+  'get /admin/login': 'UserController.login',
+  'post /admin/login-check': 'UserController.loginCheck',
+  'get /admin/logout': 'UserController.logout',
+
+  'get /admin': 'ConsultantController.table',
   'get /admin/consultants': 'ConsultantController.table',
   'get /admin/consultants/new': 'ConsultantController.new',
   'get /admin/consultants/:id/edit': 'ConsultantController.edit',
